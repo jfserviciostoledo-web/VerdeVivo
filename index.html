@@ -3,146 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jardines VerdeVivo | Especialistas en Paisajismo</title>
+    <title>Jardines VerdeVivo | Arquitectura del Paisaje</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header class="header" id="navbar">
-        <div class="logo">🌿 VerdeVivo</div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#consejos">Consejos</a></li>
-                <li><a href="#contacto" class="btn-contacto-nav">Contacto</a></li>
-            </ul>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
+        <div class="nav-container">
+            <div class="logo">VerdeVivo<span>.</span></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#consejos">Consejos</a></li>
+                    <li><a href="#contacto" class="btn-outline">Contacto</a></li>
+                </ul>
+                <div class="menu-toggle" id="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>Transformamos tus exteriores en oasis de vida</h1>
-            <p>Desde 2015, diseñamos, creamos y mantenemos espacios verdes que mejoran tu calidad de vida. Profesionalidad y sostenibilidad en cada raíz.</p>
-            <a href="#contacto" class="btn-primary">Solicitar Presupuesto</a>
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+            <h1>Diseño y paisajismo de excelencia</h1>
+            <p>Creamos entornos exteriores que combinan la belleza natural con la precisión arquitectónica. Soluciones sostenibles para espacios residenciales y corporativos.</p>
+            <a href="#proyectos" class="btn-solid">Explorar Proyectos</a>
         </div>
     </section>
 
-    <section id="servicios" class="section">
+    <section id="servicios" class="section bg-light">
         <div class="container">
-            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="section-header reveal">
+                <span class="subtitle">Nuestra Especialidad</span>
+                <h2>Servicios Integrales de Paisajismo</h2>
+            </div>
             <div class="grid services-grid">
-                <div class="card">
-                    <h3>🎨 Diseño de Paisajes</h3>
-                    <p>Creamos el jardín de tus sueños desde cero, adaptándonos al entorno y tus necesidades.</p>
+                <div class="service-card reveal" style="transition-delay: 0.1s;">
+                    <i class="fa-solid fa-leaf icon"></i>
+                    <h3>Diseño de Paisajes</h3>
+                    <p>Conceptualización y ejecución de proyectos paisajísticos adaptados a la topografía y climatología local.</p>
                 </div>
-                <div class="card">
-                    <h3>✂️ Mantenimiento</h3>
-                    <p>Cuidamos de tu jardín para que luzca perfecto y saludable durante todo el año.</p>
+                <div class="service-card reveal" style="transition-delay: 0.2s;">
+                    <i class="fa-solid fa-seedling icon"></i>
+                    <h3>Mantenimiento Premium</h3>
+                    <p>Programas de cuidado continuo adaptados a cada estación para garantizar la vitalidad de su espacio verde.</p>
                 </div>
-                <div class="card">
-                    <h3>💧 Sistemas de Riego</h3>
-                    <p>Instalaciones eficientes y automatizadas para garantizar un uso responsable del agua.</p>
+                <div class="service-card reveal" style="transition-delay: 0.3s;">
+                    <i class="fa-solid fa-droplet icon"></i>
+                    <h3>Gestión Hídrica</h3>
+                    <p>Instalación de sistemas de riego inteligente y telegestionado para maximizar la eficiencia.</p>
                 </div>
-                <div class="card">
-                    <h3>🌳 Poda Especializada</h3>
-                    <p>Mantenimiento experto para árboles y arbustos, promoviendo su crecimiento saludable.</p>
-                </div>
-                <div class="card">
-                    <h3>🛡️ Tratamientos Fitosanitarios</h3>
-                    <p>Prevención y control ecológico de plagas para mantener la salud vegetal intacta.</p>
-                </div>
-                <div class="card">
-                    <h3>🏢 Zonas Verdes Comunes</h3>
-                    <p>Gestión integral para comunidades de vecinos y áreas exteriores de empresas.</p>
+                <div class="service-card reveal" style="transition-delay: 0.4s;">
+                    <i class="fa-solid fa-tree icon"></i>
+                    <h3>Arboricultura</h3>
+                    <p>Poda técnica, evaluación de riesgos y cuidado especializado de especies arbóreas.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="proyectos" class="section bg-light">
+    <section id="proyectos" class="section">
         <div class="container">
-            <h2 class="section-title">Nuestros Trabajos</h2>
-            <p class="section-subtitle">Explora algunos de los oasis urbanos y residenciales que hemos creado.</p>
+            <div class="section-header reveal">
+                <span class="subtitle">Portfolio</span>
+                <h2>Espacios Transformados</h2>
+            </div>
             <div class="grid projects-grid">
-                <img src="https://images.unsplash.com/photo-1558904541-efa843a96f0f?auto=format&fit=crop&w=600&q=80" alt="Diseño de jardín minimalista" class="project-img">
-                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Mantenimiento de zonas comunes" class="project-img">
-                <img src="https://images.unsplash.com/photo-1416879598555-1416879598555?auto=format&fit=crop&w=600&q=80" alt="Instalación de riego en huerto" class="project-img">
-                <img src="https://images.unsplash.com/photo-1598902468171-0f50e502598b?auto=format&fit=crop&w=600&q=80" alt="Poda de arbustos decorativos" class="project-img">
+                <div class="project-item reveal">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Residencia Los Olivos">
+                    </div>
+                    <div class="project-info">
+                        <h4>Residencia Los Olivos</h4>
+                        <p>Diseño Minimalista</p>
+                    </div>
+                </div>
+                <div class="project-item reveal" style="transition-delay: 0.1s;">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1605810731693-e47b30f8c326?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Complejo Ágora">
+                    </div>
+                    <div class="project-info">
+                        <h4>Complejo Ágora</h4>
+                        <p>Paisajismo Corporativo</p>
+                    </div>
+                </div>
+                <div class="project-item reveal" style="transition-delay: 0.2s;">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1466692476877-332abf841050?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Villa Serenidad">
+                    </div>
+                    <div class="project-info">
+                        <h4>Villa Serenidad</h4>
+                        <p>Restauración y Flora Autóctona</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="consejos" class="section">
+    <section id="consejos" class="section bg-light">
         <div class="container">
-            <h2 class="section-title">Consejos de Jardinería</h2>
+            <div class="section-header reveal">
+                <span class="subtitle">Publicaciones</span>
+                <h2>Consejos de Jardinería</h2>
+            </div>
             <div class="grid blog-grid">
-                <div class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1416879598555-1416879598555?auto=format&fit=crop&w=400&q=80" alt="Regar plantas">
+                <div class="blog-card reveal">
+                    <img src="https://images.unsplash.com/photo-1463320726281-696a485928c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Riego de plantas">
                     <div class="blog-content">
                         <h4>¿Cómo regar correctamente en verano?</h4>
-                        <p>Evita las horas centrales del día para que el agua no se evapore. El amanecer es el momento ideal para hidratar tus plantas.</p>
+                        <p>Evite las horas centrales del día. El amanecer es el momento ideal para una hidratación eficiente de sus plantas.</p>
                     </div>
                 </div>
-                <div class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1524486361537-8ad15938e1a3?auto=format&fit=crop&w=400&q=80" alt="Abono natural">
+                <div class="blog-card reveal" style="transition-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1530836369250-ef71a3f5e4bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Abono y cultivos">
                     <div class="blog-content">
                         <h4>El poder del abono orgánico</h4>
-                        <p>Mejora la estructura del suelo y aporta nutrientes esenciales de forma progresiva y ecológica a tus cultivos.</p>
+                        <p>Mejore la estructura del suelo aportando nutrientes esenciales de forma progresiva a sus zonas verdes.</p>
                     </div>
                 </div>
-                <div class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1459156212016-c812468e2115?auto=format&fit=crop&w=400&q=80" alt="Planta de interior">
+                <div class="blog-card reveal" style="transition-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1459156212016-c812468e2115?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Plantas de interior">
                     <div class="blog-content">
-                        <h4>3 plantas de interior indestructibles</h4>
-                        <p>Si tienes poco tiempo, la Sansevieria, el Poto y la Zamioculca son opciones que decoran sin exigir demasiada atención.</p>
+                        <h4>3 plantas de interior resistentes</h4>
+                        <p>La Sansevieria, el Poto y la Zamioculca son opciones arquitectónicas que decoran sin exigir un mantenimiento exhaustivo.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contacto" class="section bg-dark text-white">
+    <section id="contacto" class="section">
         <div class="container contact-container">
-            <div class="contact-info">
-                <h2>Hablemos de tu jardín</h2>
-                <p>¿Tienes una idea en mente o necesitas que cuidemos tus espacios verdes? Rellena el formulario y te enviaremos una propuesta personalizada sin compromiso.</p>
+            <div class="contact-text reveal">
+                <span class="subtitle">Hablemos</span>
+                <h2>Inicie su Proyecto</h2>
+                <p>Póngase en contacto con nuestro equipo de paisajistas para programar una consulta inicial y evaluar las posibilidades de su espacio.</p>
+                <div class="contact-details">
+                    <p><i class="fa-solid fa-phone"></i> +34 900 123 456</p>
+                    <p><i class="fa-solid fa-envelope"></i> proyectos@verdevivo.es</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Estudio Central, Madrid</p>
+                </div>
             </div>
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Correo Electrónico</label>
-                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="servicio">Servicio de Interés</label>
-                    <select id="servicio" name="servicio">
-                        <option value="diseno">Diseño de Paisajes</option>
-                        <option value="mantenimiento">Mantenimiento</option>
-                        <option value="comunidades">Comunidades y Zonas Verdes</option>
-                        <option value="otros">Otros / Suministros</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
-                </div>
-                <button type="submit" class="btn-primary">Enviar Mensaje</button>
-            </form>
+            <div class="contact-form-wrapper reveal" style="transition-delay: 0.2s;">
+                <form id="contactForm" class="modern-form">
+                    <div class="form-group">
+                        <input type="text" id="nombre" required placeholder=" ">
+                        <label for="nombre">Nombre completo</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required placeholder=" ">
+                        <label for="email">Correo electrónico</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="asunto" required>
+                            <option value="" disabled selected>Seleccione el servicio</option>
+                            <option value="diseno">Proyecto de Diseño</option>
+                            <option value="mantenimiento">Mantenimiento Corporativo/Comunidad</option>
+                            <option value="asesoria">Asesoría Técnica</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="mensaje" rows="3" required placeholder=" "></textarea>
+                        <label for="mensaje">Detalles de su proyecto</label>
+                    </div>
+                    <button type="submit" class="btn-solid w-100">Enviar Solicitud</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <footer class="footer">
-        <p>&copy; 2026 Jardines VerdeVivo. Todos los derechos reservados.</p>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jardines VerdeVivo. Arquitectura del Paisaje.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
