@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. Navbar dinámico (Cambia de transparente a sólido al hacer scroll)
+    // Navbar dinámico
     const header = document.getElementById('navbar');
     
     window.addEventListener('scroll', () => {
@@ -11,13 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 2. Menú Móvil
+    // Menú Móvil
     const mobileMenu = document.getElementById('mobile-menu');
     const navLinks = document.querySelector('.nav-links');
 
     mobileMenu.addEventListener('click', () => {
         navLinks.classList.toggle('active');
-        // Cambiar icono de hamburguesa a "X"
         const icon = mobileMenu.querySelector('i');
         if(navLinks.classList.contains('active')){
             icon.classList.remove('fa-bars');
@@ -28,11 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 3. Animaciones de Scroll (Fade Up profesional)
+    // Animaciones de Scroll
     const revealElements = document.querySelectorAll('.reveal');
 
     const revealOptions = {
-        threshold: 0.15, // El elemento aparece cuando el 15% es visible
+        threshold: 0.15,
         rootMargin: "0px 0px -50px 0px"
     };
 
@@ -42,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             } else {
                 entry.target.classList.add('active');
-                observer.unobserve(entry.target); // Dejar de observar una vez animado
+                observer.unobserve(entry.target); 
             }
         });
     }, revealOptions);
@@ -51,14 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
         revealOnScroll.observe(el);
     });
 
-    // 4. Lógica de Envío del Formulario
+    // Envío del Formulario
     const contactForm = document.getElementById('contactForm');
     const btnSubmit = contactForm.querySelector('button[type="submit"]');
     
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        // Simular efecto de carga en el botón
         const originalText = btnSubmit.innerText;
         btnSubmit.innerText = 'Enviando...';
         btnSubmit.style.opacity = '0.7';
@@ -68,10 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Su solicitud ha sido recibida con éxito. Nuestro equipo se pondrá en contacto con usted a la mayor brevedad.');
             contactForm.reset();
             
-            // Restaurar botón
             btnSubmit.innerText = originalText;
             btnSubmit.style.opacity = '1';
             btnSubmit.disabled = false;
-        }, 1500); // Simula 1.5 segundos de retraso de red
+        }, 1500); 
     });
 });
