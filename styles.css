@@ -1,10 +1,10 @@
 /* --- Variables Profesionales --- */
 :root {
-    --color-primary: #1A3622; /* Verde pino oscuro muy elegante */
-    --color-accent: #A38C59; /* Tono tierra/dorado apagado */
+    --color-primary: #1A3622;
+    --color-accent: #A38C59;
     --color-text-main: #333333;
     --color-text-muted: #666666;
-    --color-bg-light: #F7F8F7; /* Gris/verde muy sutil */
+    --color-bg-light: #F7F8F7;
     --color-white: #FFFFFF;
     
     --font-heading: 'Playfair Display', serif;
@@ -237,22 +237,31 @@ a {
 
 .w-100 { width: 100%; }
 
-/* --- Grids --- */
+/* --- Grids Generales --- */
 .grid {
     display: grid;
     gap: 30px;
 }
 
-.services-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 .projects-grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
 .blog-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 
-/* --- Tarjetas de Servicios --- */
+/* --- Servicios (Layout Simétrico para los 7 elementos) --- */
+.services-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
 .service-card {
     background: var(--color-white);
     padding: 40px 30px;
     border: 1px solid #EAEAEA;
     transition: var(--transition-smooth);
+    flex: 1 1 300px;
+    max-width: 360px;
+    text-align: center;
 }
 
 .service-card:hover {
@@ -262,13 +271,13 @@ a {
 }
 
 .service-card .icon {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: var(--color-accent);
     margin-bottom: 20px;
 }
 
 .service-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 15px;
 }
 
@@ -352,31 +361,6 @@ a {
     margin: 0;
 }
 
-/* --- Banner Filosofía --- */
-.banner-section {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.banner-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.banner-content h2 {
-    color: var(--color-white);
-    font-size: 2.5rem;
-    margin-bottom: 25px;
-}
-
-.banner-content p {
-    font-size: 1.2rem;
-    font-weight: 300;
-    opacity: 0.9;
-}
-
 /* --- Contacto --- */
 .contact-container {
     display: grid;
@@ -402,7 +386,7 @@ a {
     color: var(--color-accent);
 }
 
-/* Formulario Moderno (Floating Labels) */
+/* Formulario Moderno */
 .modern-form {
     background: var(--color-white);
     padding: 50px;
@@ -445,7 +429,6 @@ a {
     border-bottom-color: var(--color-primary);
 }
 
-/* Lógica del Floating Label */
 .form-group input:focus ~ label,
 .form-group input:not(:placeholder-shown) ~ label,
 .form-group textarea:focus ~ label,
@@ -485,7 +468,7 @@ a {
     color: var(--color-white);
 }
 
-/* --- Animaciones JS (Intersection Observer) --- */
+/* --- Animaciones JS --- */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -522,7 +505,6 @@ a {
     }
     
     .nav-links.active { max-height: 400px; padding: 20px 0; }
-    
     .nav-links a { color: var(--color-primary); padding: 15px 20px; display: block; }
     .nav-links a::after { display: none; }
     
