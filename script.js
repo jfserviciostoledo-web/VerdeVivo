@@ -1,17 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // Navbar dinámico
-    const header = document.getElementById('navbar');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-
-    // Menú Móvil
     const mobileMenu = document.getElementById('mobile-menu');
     const navLinks = document.querySelector('.nav-links');
 
@@ -27,45 +14,52 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Animaciones de Scroll
-    const revealElements = document.querySelectorAll('.reveal');
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                mobileMenu.querySelector('i').classList.remove('fa-xmark');
+                mobileMenu.querySelector('i').classList.add('fa-bars');
+            }
+        });
+    });
 
-    const revealOptions = {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
-    };
+    const header = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
 
     const revealOnScroll = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            } else {
+            if (entry.isIntersecting) {
                 entry.target.classList.add('active');
                 observer.unobserve(entry.target); 
             }
         });
     }, revealOptions);
 
-    revealElements.forEach(el => {
-        revealOnScroll.observe(el);
-    });
+    revealElements.forEach(el => revealOnScroll.observe(el));
 
-    // Envío del Formulario
     const contactForm = document.getElementById('contactForm');
     const btnSubmit = contactForm.querySelector('button[type="submit"]');
     
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
         const originalText = btnSubmit.innerText;
         btnSubmit.innerText = 'Enviando...';
         btnSubmit.style.opacity = '0.7';
         btnSubmit.disabled = true;
 
         setTimeout(() => {
-            alert('Su solicitud ha sido recibida con éxito. Nuestro equipo se pondrá en contacto con usted a la mayor brevedad.');
+            alert('¡Gracias por contactar con Jardines VerdeVivo! Hemos recibido su solicitud y le responderemos pronto.');
             contactForm.reset();
-            
             btnSubmit.innerText = originalText;
             btnSubmit.style.opacity = '1';
             btnSubmit.disabled = false;
