@@ -6,7 +6,7 @@
     <title>Jardines VerdeVivo | Arquitectura del Paisaje</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,14 +14,16 @@
 
     <header class="header" id="navbar">
         <div class="nav-container">
-            <div class="logo">VerdeVivo<span>.</span></div>
+            <a href="#inicio" class="logo-link">
+                <div class="logo">VerdeVivo<span>.</span></div>
+            </a>
             <nav>
-                <ul class="nav-links">
+                <ul class="nav-links" id="nav-links">
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#proyectos">Proyectos</a></li>
                     <li><a href="#consejos">Consejos</a></li>
-                    <li><a href="#contacto" class="btn-outline">Contacto</a></li>
+                    <li><a href="#contacto" class="btn-contacto-header">Contacto</a></li>
                 </ul>
                 <div class="menu-toggle" id="mobile-menu">
                     <i class="fas fa-bars"></i>
@@ -30,170 +32,183 @@
         </div>
     </header>
 
-    <section id="inicio" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content reveal">
-            <h1>Diseño y paisajismo de excelencia</h1>
-            <p>Creamos entornos exteriores que combinan la belleza natural con la precisión arquitectónica. Soluciones sostenibles para espacios residenciales y corporativos.</p>
-            <a href="#proyectos" class="btn-solid">Explorar Proyectos</a>
-        </div>
-    </section>
+    <main>
+        
+        <section id="inicio" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content reveal">
+                <h1 class="hero-title">VerdeVivo.</h1>
+                <p class="intro-text">
+                    Jardines VerdeVivo es una empresa especializada en el diseño, creación y
+                    mantenimiento de jardines y espacios verdes. Desde su fundación en 2015, la empresa
+                    ha trabajado con clientes particulares, comunidades y empresas, ofreciendo soluciones
+                    adaptadas a cada espacio.<br><br>
+                    Nuestro equipo está formado por profesionales en jardinería y paisajismo que trabajan
+                    para crear entornos naturales funcionales y estéticamente atractivos.<br><br>
+                    El objetivo es mejorar la calidad de los espacios exteriores, aportando valor estético y
+                    bienestar a quienes los disfrutan.
+                </p>
+                <a href="#proyectos" class="btn-solid">Explorar Proyectos</a>
+            </div>
+        </section>
 
-    <section id="servicios" class="section bg-light">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="subtitle">Nuestra Especialidad</span>
-                <h2>Servicios Integrales de Paisajismo</h2>
+        <section id="servicios" class="section bg-light">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="subtitle">Nuestra Especialidad</span>
+                    <h2>Servicios Integrales de Paisajismo</h2>
+                </div>
+                <div class="services-flex">
+                    <div class="service-card reveal" style="transition-delay: 0.1s;">
+                        <i class="fa-solid fa-leaf icon"></i>
+                        <h3>Diseño de jardines</h3>
+                        <p>Conceptualización y creación de espacios únicos adaptados a la topografía y climatología local.</p>
+                    </div>
+                    <div class="service-card reveal" style="transition-delay: 0.2s;">
+                        <i class="fa-solid fa-seedling icon"></i>
+                        <h3>Mantenimiento de jardines</h3>
+                        <p>Programas de cuidado continuo adaptados a cada estación para garantizar la vitalidad de su espacio verde.</p>
+                    </div>
+                    <div class="service-card reveal" style="transition-delay: 0.3s;">
+                        <i class="fa-solid fa-droplet icon"></i>
+                        <h3>Instalación de sistemas de riego</h3>
+                        <p>Instalación de sistemas inteligentes y telegestionados para maximizar la eficiencia hídrica.</p>
+                    </div>
+                    <div class="service-card reveal" style="transition-delay: 0.4s;">
+                        <i class="fa-solid fa-scissors icon"></i>
+                        <h3>Poda de árboles y plantas</h3>
+                        <p>Mantenimiento técnico para promover el crecimiento saludable, la estética y la seguridad de las especies.</p>
+                    </div>
+                    <div class="service-card reveal" style="transition-delay: 0.5s;">
+                        <i class="fa-solid fa-bug-slash icon"></i>
+                        <h3>Tratamientos fitosanitarios</h3>
+                        <p>Prevención y control ecológico de plagas y enfermedades para proteger su ecosistema de forma segura.</p>
+                    </div>
+                    <div class="service-card reveal" style="transition-delay: 0.6s;">
+                        <i class="fa-solid fa-users icon"></i>
+                        <h3>Creación de zonas verdes en comunidades</h3>
+                        <p>Diseño y gestión integral de áreas comunes residenciales para el confort y disfrute de los vecinos.</p>
+                    </div>
+                    <div class="service-card reveal" style="transition-delay: 0.7s;">
+                        <i class="fa-solid fa-shop icon"></i>
+                        <h3>Tienda de suministros y herramientas de jardinería</h3>
+                        <p>Tienda especializada con productos profesionales y asesoramiento técnico para sus propios proyectos.</p>
+                    </div>
+                </div>
             </div>
-            <div class="services-flex">
-                <div class="service-card reveal" style="transition-delay: 0.1s;">
-                    <i class="fa-solid fa-leaf icon"></i>
-                    <h3>Diseño de jardines</h3>
-                    <p>Conceptualización y ejecución de proyectos paisajísticos adaptados a la topografía y climatología local.</p>
-                </div>
-                <div class="service-card reveal" style="transition-delay: 0.2s;">
-                    <i class="fa-solid fa-seedling icon"></i>
-                    <h3>Mantenimiento de jardines</h3>
-                    <p>Programas de cuidado continuo adaptados a cada estación para garantizar la vitalidad de su espacio verde.</p>
-                </div>
-                <div class="service-card reveal" style="transition-delay: 0.3s;">
-                    <i class="fa-solid fa-droplet icon"></i>
-                    <h3>Instalación de sistemas de riego</h3>
-                    <p>Sistemas inteligentes y telegestionados para maximizar la eficiencia hídrica.</p>
-                </div>
-                <div class="service-card reveal" style="transition-delay: 0.4s;">
-                    <i class="fa-solid fa-scissors icon"></i>
-                    <h3>Poda de árboles y plantas</h3>
-                    <p>Poda técnica, evaluación de riesgos y cuidado especializado de especies arbóreas.</p>
-                </div>
-                <div class="service-card reveal" style="transition-delay: 0.5s;">
-                    <i class="fa-solid fa-bug-slash icon"></i>
-                    <h3>Tratamientos fitosanitarios</h3>
-                    <p>Prevención y control ecológico de plagas para mantener la salud vegetal intacta.</p>
-                </div>
-                <div class="service-card reveal" style="transition-delay: 0.6s;">
-                    <i class="fa-solid fa-users icon"></i>
-                    <h3>Creación de zonas verdes en comunidades</h3>
-                    <p>Diseño y gestión integral de áreas comunes para el bienestar de los vecinos.</p>
-                </div>
-                <div class="service-card reveal" style="transition-delay: 0.7s;">
-                    <i class="fa-solid fa-shop icon"></i>
-                    <h3>Tienda de suministros y herramientas de jardinería</h3>
-                    <p>Todo el equipamiento y productos necesarios para el cuidado profesional de su jardín.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="proyectos" class="section">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="subtitle">Portfolio</span>
-                <h2>Espacios Transformados</h2>
+        <section id="proyectos" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="subtitle">Portfolio</span>
+                    <h2>Espacios Transformados</h2>
+                </div>
+                <div class="grid projects-grid">
+                    <div class="project-item reveal">
+                        <div class="img-wrapper">
+                            <img src="https://www.publicdomainpictures.net/pictures/280000/nahled/gardening-power-lawnmower.jpg" alt="Residencia Los Olivos">
+                        </div>
+                        <div class="project-info">
+                            <h4>Residencia Los Olivos</h4>
+                            <p>Diseño Minimalista</p>
+                        </div>
+                    </div>
+                    <div class="project-item reveal" style="transition-delay: 0.1s;">
+                        <div class="img-wrapper">
+                            <img src="https://images.pexels.com/photos/7658774/pexels-photo-7658774.jpeg" alt="Complejo Ágora">
+                        </div>
+                        <div class="project-info">
+                            <h4>Complejo Ágora</h4>
+                            <p>Paisajismo Corporativo</p>
+                        </div>
+                    </div>
+                    <div class="project-item reveal" style="transition-delay: 0.2s;">
+                        <div class="img-wrapper">
+                            <img src="https://c.pxhere.com/photos/6e/88/garden_hedge_topiary_gardening-598402.jpg!d" alt="Villa Serenidad">
+                        </div>
+                        <div class="project-info">
+                            <h4>Villa Serenidad</h4>
+                            <p>Restauración y Flora Autóctona</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="grid projects-grid">
-                <div class="project-item reveal">
-                    <div class="img-wrapper">
-                        <img src="https://www.publicdomainpictures.net/pictures/280000/nahled/gardening-power-lawnmower.jpg" alt="Residencia Los Olivos">
-                    </div>
-                    <div class="project-info">
-                        <h4>Residencia Los Olivos</h4>
-                        <p>Diseño Minimalista</p>
-                    </div>
-                </div>
-                <div class="project-item reveal" style="transition-delay: 0.1s;">
-                    <div class="img-wrapper">
-                        <img src="https://images.pexels.com/photos/7658774/pexels-photo-7658774.jpeg" alt="Complejo Ágora">
-                    </div>
-                    <div class="project-info">
-                        <h4>Complejo Ágora</h4>
-                        <p>Paisajismo Corporativo</p>
-                    </div>
-                </div>
-                <div class="project-item reveal" style="transition-delay: 0.2s;">
-                    <div class="img-wrapper">
-                        <img src="https://c.pxhere.com/photos/6e/88/garden_hedge_topiary_gardening-598402.jpg!d" alt="Villa Serenidad">
-                    </div>
-                    <div class="project-info">
-                        <h4>Villa Serenidad</h4>
-                        <p>Restauración y Flora Autóctona</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="consejos" class="section bg-light">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="subtitle">Publicaciones</span>
-                <h2>Consejos de Jardinería</h2>
+        <section id="consejos" class="section bg-light">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="subtitle">Publicaciones</span>
+                    <h2>Consejos de Jardinería</h2>
+                </div>
+                <div class="grid blog-grid">
+                    <div class="blog-card reveal">
+                        <img src="https://c.pxhere.com/photos/7d/2c/active_close_up_color_countryside_flowers_hands_outdoors_plants-1527395.jpg!d" alt="Riego de plantas">
+                        <div class="blog-content">
+                            <h4>¿Cómo regar correctamente en verano?</h4>
+                            <p>Evite las horas centrales del día. El amanecer es el momento ideal para una hidratación eficiente de sus plantas.</p>
+                        </div>
+                    </div>
+                    <div class="blog-card reveal" style="transition-delay: 0.1s;">
+                        <img src="https://c.pxhere.com/photos/a7/66/dirt_soil_plant_gardening-891486.jpg!d" alt="Abono y cultivos">
+                        <div class="blog-content">
+                            <h4>El poder del abono orgánico</h4>
+                            <p>Mejore la estructura del suelo aportando nutrientes esenciales de forma progresiva a sus zonas verdes.</p>
+                        </div>
+                    </div>
+                    <div class="blog-card reveal" style="transition-delay: 0.2s;">
+                        <img src="https://images.unsplash.com/photo-1459156212016-c812468e2115?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Plantas de interior">
+                        <div class="blog-content">
+                            <h4>3 plantas de interior resistentes</h4>
+                            <p>La Sansevieria, el Poto y la Zamioculca son opciones arquitectónicas que decoran sin exigir un mantenimiento exhaustivo.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="grid blog-grid">
-                <div class="blog-card reveal">
-                    <img src="https://c.pxhere.com/photos/7d/2c/active_close_up_color_countryside_flowers_hands_outdoors_plants-1527395.jpg!d" alt="Riego de plantas">
-                    <div class="blog-content">
-                        <h4>¿Cómo regar correctamente en verano?</h4>
-                        <p>Evite las horas centrales del día. El amanecer es el momento ideal para una hidratación eficiente de sus plantas.</p>
-                    </div>
-                </div>
-                <div class="blog-card reveal" style="transition-delay: 0.1s;">
-                    <img src="https://c.pxhere.com/photos/a7/66/dirt_soil_plant_gardening-891486.jpg!d" alt="Abono y cultivos">
-                    <div class="blog-content">
-                        <h4>El poder del abono orgánico</h4>
-                        <p>Mejore la estructura del suelo aportando nutrientes esenciales de forma progresiva a sus zonas verdes.</p>
-                    </div>
-                </div>
-                <div class="blog-card reveal" style="transition-delay: 0.2s;">
-                    <img src="https://images.unsplash.com/photo-1459156212016-c812468e2115?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Plantas de interior">
-                    <div class="blog-content">
-                        <h4>3 plantas de interior resistentes</h4>
-                        <p>La Sansevieria, el Poto y la Zamioculca son opciones arquitectónicas que decoran sin exigir un mantenimiento exhaustivo.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contacto" class="section">
-        <div class="container contact-container">
-            <div class="contact-text reveal">
-                <span class="subtitle">Hablemos</span>
-                <h2>Inicie su Proyecto</h2>
-                <p>Póngase en contacto con nuestro equipo de paisajistas para programar una consulta inicial y evaluar las posibilidades de su espacio.</p>
-                <div class="contact-details">
-                    <p><i class="fa-solid fa-phone"></i> +34 900 123 456</p>
-                    <p><i class="fa-solid fa-envelope"></i> proyectos@verdevivo.es</p>
-                    <p><i class="fa-solid fa-location-dot"></i> Estudio Central, Madrid</p>
+        <section id="contacto" class="section">
+            <div class="container contact-container">
+                <div class="contact-text reveal">
+                    <span class="subtitle">Hablemos</span>
+                    <h2>Inicie su Proyecto</h2>
+                    <p>Póngase en contacto con nuestro equipo de paisajistas para programar una consulta inicial y evaluar las posibilidades de su espacio.</p>
+                    <div class="contact-details">
+                        <p><i class="fa-solid fa-phone"></i> +34 900 123 456</p>
+                        <p><i class="fa-solid fa-envelope"></i> proyectos@verdevivo.es</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Estudio Central, Madrid</p>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper reveal" style="transition-delay: 0.2s;">
+                    <form id="contactForm" class="modern-form">
+                        <div class="form-group">
+                            <input type="text" id="nombre" required placeholder=" ">
+                            <label for="nombre">Nombre completo</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required placeholder=" ">
+                            <label for="email">Correo electrónico</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="asunto" required>
+                                <option value="" disabled selected>Seleccione el servicio</option>
+                                <option value="diseno">Proyecto de Diseño</option>
+                                <option value="mantenimiento">Mantenimiento Corporativo/Comunidad</option>
+                                <option value="asesoria">Asesoría Técnica</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="mensaje" rows="3" required placeholder=" "></textarea>
+                            <label for="mensaje">Detalles de su proyecto</label>
+                        </div>
+                        <button type="submit" class="btn-solid w-100">Enviar Solicitud</button>
+                    </form>
                 </div>
             </div>
-            <div class="contact-form-wrapper reveal" style="transition-delay: 0.2s;">
-                <form id="contactForm" class="modern-form">
-                    <div class="form-group">
-                        <input type="text" id="nombre" required placeholder=" ">
-                        <label for="nombre">Nombre completo</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" required placeholder=" ">
-                        <label for="email">Correo electrónico</label>
-                    </div>
-                    <div class="form-group">
-                        <select id="asunto" required>
-                            <option value="" disabled selected>Seleccione el servicio</option>
-                            <option value="diseno">Proyecto de Diseño</option>
-                            <option value="mantenimiento">Mantenimiento Corporativo/Comunidad</option>
-                            <option value="asesoria">Asesoría Técnica</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="mensaje" rows="3" required placeholder=" "></textarea>
-                        <label for="mensaje">Detalles de su proyecto</label>
-                    </div>
-                    <button type="submit" class="btn-solid w-100">Enviar Solicitud</button>
-                </form>
-            </div>
-        </div>
-    </section>
+        </section>
+
+    </main>
 
     <footer class="footer">
         <div class="container">
@@ -207,6 +222,10 @@
             </div>
         </div>
     </footer>
+
+    <a href="https://wa.me/34600000000" class="whatsapp-float" target="_blank" title="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
     <script src="script.js"></script>
 </body>
